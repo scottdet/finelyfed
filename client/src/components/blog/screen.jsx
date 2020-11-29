@@ -114,7 +114,7 @@ function Screen({  pages, category }) {
             <div className="wrapper just">
               { filteredPages.map((page, index) => (
                 index > 3 ? 
-                  <div className="col-1">
+                  <div className="col-3">
                     <PostPreview
                       key={`blogpost-${page.title}-${page.created}`}
                       title={page.title}
@@ -136,7 +136,7 @@ function Screen({  pages, category }) {
               <h1 className="text-center category-title">{category}</h1>
               <div className="wrapper just">
                 { filteredPages.map((page, index) => (
-                    <div className="col-1">
+                    <div className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
                         title={page.title}
