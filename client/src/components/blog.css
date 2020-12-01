@@ -426,10 +426,10 @@ img.main-menu-logo {
 
 .article-content h2 {
   font-size: 34px;
-  letter-sspacing: 0.25px;
-  padding-top: 0px;
-  paddin-bottom: 0px;
-  margin-bottom: -10px;
+  line-height: 34px;
+  letter-spacing: 0.25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .article-content h3 {
@@ -437,7 +437,7 @@ img.main-menu-logo {
   line-height: 20px;
   letter-spacing: 0.15px;
   padding-top: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .article-content img {
