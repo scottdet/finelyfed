@@ -96,7 +96,7 @@ function Screen({  pages, category }) {
 
             <div className="insta-row">
               <div className="insta-parent" style={{ position: 'relative' }}>
-                <a href="https://www.instagram.com/p/B8u4GPIBGag/" target="_blank">
+                <a href="https://www.instagram.com/p/CIHaekAHtRy/" target="_blank">
                   <img className="insta-pic" src={bailey} style={{ display: 'block' }} />
                 </a>
               </div>
