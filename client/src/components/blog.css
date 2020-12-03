@@ -648,10 +648,6 @@ i#pinterest-icon:hover {
   transition: all .3s;
 }
 
-a:hover{
-  opacity: 0.5 !important;
-}
-
 .about-widget .about-ig-wrap a {
   width: calc(50% - 12px);
   margin-bottom: 12px;
