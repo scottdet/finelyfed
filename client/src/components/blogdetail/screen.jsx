@@ -74,7 +74,7 @@ const Screen = ({
           <div className="post-date">
             <span>
               {new Date(created).toLocaleDateString(
-                'en-DE',
+                'en-US',
                 {
                   day: 'numeric',
                   month: 'short',
@@ -126,7 +126,7 @@ const Screen = ({
               <div className="post-date mobile">
                 <span>
                   {new Date(created).toLocaleDateString(
-                    'en-DE',
+                    'en-US',
                     {
                       day: 'numeric',
                       month: 'short',
