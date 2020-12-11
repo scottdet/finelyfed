@@ -449,9 +449,8 @@ img.main-menu-logo {
 .article-content h2 {
   font-size: 34px;
   letter-sspacing: 0.25px;
-  padding-top: 0px;
-  paddin-bottom: 0px;
-  margin-bottom: -10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }
 
 .article-content h3 {
