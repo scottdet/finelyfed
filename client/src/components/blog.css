@@ -470,6 +470,10 @@ img.main-menu-logo {
   bottom: 0px;
 }
 
+.article-content pre {
+  padding-top: 21px;
+}
+
 .article-content iframe {
   max-width: 100%;
   border: none;
