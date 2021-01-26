@@ -24,8 +24,6 @@ class Layout extends Component {
     const [state, dispatch] = this.context;
     const { data } = await butter.post.list();
 
-    console.log(state.pages.data);
-
     dispatch({
       type: "update_pages",
       data
