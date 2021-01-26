@@ -15,7 +15,7 @@ import bailey from '../../components/images/bailey.png';
 function Screen({  pages, category }) {
 
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
-  console.log(filteredPages)
+  
   return (
     <div>
       <div className="blog-page">
@@ -143,7 +143,7 @@ function Screen({  pages, category }) {
             <div className="wrapper just">
               { filteredPages.map((page, index) => (
                 index > 2 ? 
-                  <div className="col-3">
+                  <div key={index} className="col-3">
                     <PostPreview
                       key={`blogpost-${page.title}-${page.created}`}
                       title={page.title}
@@ -165,7 +165,7 @@ function Screen({  pages, category }) {
               <h1 className="text-center category-title">{category}</h1>
               <div className="wrapper just">
                 { filteredPages.map((page, index) => (
-                    <div className="col-3">
+                    <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
                         title={page.title}
