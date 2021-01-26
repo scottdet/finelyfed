@@ -27,19 +27,14 @@ const Blog = ({ match }) => {
     ReactGA.initialize('UA-188118979-2');
     if (paths[1] === "") {
       ReactGA.pageview('/Home');
-      console.log(paths[1]);
     } else if (paths[1] === "food") {
       ReactGA.pageview('/Food');
-      console.log(paths[1]);
     } else if (paths[1] === "travel") {
       ReactGA.pageview('/Travel');
-      console.log(paths[1]);
     } else if (paths[1] === "wellness") {
       ReactGA.pageview('/Wellness');
-      console.log(paths[1]);
     } else if (paths[1] === "lifestyle") {
       ReactGA.pageview('/LifeStyle');
-      console.log(paths[1]);
     }
   }, [paths[1]])
 
