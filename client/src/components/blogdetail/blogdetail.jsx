@@ -3,6 +3,7 @@ import Screen from './screen';
 import { GlobalContext } from '../../store';
 import { butter } from '../../store/api';
 import { Segment } from 'semantic-ui-react';
+import ReactGA from 'react-ga'
 import '../blog.css';
 
 
@@ -10,7 +11,7 @@ const BlogDetail = ({ match }) => {
   const [state, dispatch] = useContext(GlobalContext);
   const slug = match.path.split(/[/]/);
   const currentPage = state.pages.data.find(page => page.slug === slug[slug.length - 1]);
-  
+
   const category = currentPage.categories[0].name;
   const filteredPages = state.pages.data.filter(page => ((page.categories[0].name === category) && (page.slug !== currentPage.slug)));
   const unfilteredPages = state.pages.data.filter(page => ((page.categories[0].name !== category)));
@@ -28,6 +29,14 @@ const BlogDetail = ({ match }) => {
     getPages();
   }, []);
 
+
+  useEffect(() => {
+    const detail = "/" + category + "/" + slug[slug.length - 1];
+
+    ReactGA.initialize('UA-188118979-2');
+    ReactGA.pageview(detail);
+
+  }, [slug[slug.length - 1]])
   return (
     <Segment vertical style={{ backgroundColor: 'white' }}>
       {currentPage && (
