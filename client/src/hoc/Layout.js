@@ -22,7 +22,7 @@ class Layout extends Component {
 
   async componentDidMount() {
     const [state, dispatch] = this.context;
-    const { data } = await butter.post.list({ page: 1, page_size: 100 });
+    const { data } = await butter.post.list({ page: 1, page_size: 20 });
 
     dispatch({
       type: "update_pages",
