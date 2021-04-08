@@ -473,6 +473,8 @@ img.main-menu-logo {
 }
 
 .article-content sub {
+  position: relative;
+  margin-top: 5px;
   bottom: 0px;
 }
 
