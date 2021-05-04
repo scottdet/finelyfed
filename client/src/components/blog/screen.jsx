@@ -77,7 +77,7 @@ function Screen({  pages, category }) {
                   <div className="featured-summary" >
                     <p> This is my unofficial love letter to Los Angeles. I've been in this city for over seven years, but I didn't start venturing out restaurant-wise until I graduated from college. Wrting this during the pandemic...</p>
                     <div className="category">
-                      <a href="/food/los-angeles-restaurant-guide">
+                      <a href="/food/best-restaurants-in-los-angeles">
                         <span style={{ paddingLeft: '45px' }}> Read More >> </span>
                       </a>
                     </div>
