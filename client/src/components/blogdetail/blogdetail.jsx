@@ -38,7 +38,7 @@ const BlogDetail = ({ match }) => {
 
   }, [slug[slug.length - 1]])
   return (
-    <Segment vertical style={{ backgroundColor: 'white' }}>
+    <Segment vertical style={{ backgroundColor: '#f8faff' }}>
       {currentPage && (
         <Screen
           image={currentPage.featured_image}

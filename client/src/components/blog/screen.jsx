@@ -139,7 +139,7 @@ function Screen({  pages, category }) {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container main-posts">
             <div className="wrapper just">
               { filteredPages.map((page, index) => (
                 index > 2 ? 
