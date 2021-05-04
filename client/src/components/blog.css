@@ -1,5 +1,7 @@
 /* ----------------------------------------- */
+
 /*              UNIVERSAL CSS                */
+
 /* ----------------------------------------- */
 
 .article-content sub {
@@ -10,6 +12,7 @@
 
 body {
   background: #f0f2fa;
+  color: #242424 !important;
 }
 
 h1 {
@@ -36,7 +39,7 @@ h1 {
   line-height: 34px;
   margin-top: -4px;
   font-family: 'DM Serif Display', serif;
-}  
+}
 
 .featured-title p {
   font-weight: 400 !important;
@@ -73,7 +76,7 @@ a, span {
 }
 
 .article-content a {
-  color: black;
+  color: #242424;
 }
 
 h1, h2, h6 {
@@ -87,7 +90,6 @@ h1 {
 h1, h2, h3, h4, h5, h6, a, p {
   -webkit-font-smoothing: antialiased !important;
 }
-
 
 #id {
   padding-left: 20px;
@@ -132,7 +134,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   float: left;
   font-size: 14px;
   letter-spacing: 4.6px;
-  color: #000;
+  color: #242424;
   text-transform: uppercase;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -150,7 +152,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 4.5px;
-  color: #000;
+  color: #4E598C;
   text-transform: uppercase;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -220,9 +222,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   padding: 22px 35px 25px 12px;
 }
 
-#myTopnav span,
-#myTopnav span:before,
-#myTopnav span:after {
+#myTopnav span, #myTopnav span:before, #myTopnav span:after {
   cursor: pointer;
   border-radius: 2px;
   height: 4px;
@@ -258,12 +258,11 @@ h1, h2, h3, h4, h5, h6, a, p {
     float: left;
     font-size: 14px;
     letter-spacing: 4.6px;
-    color: #000;
-    text-transform: uppercase;;
+    color: #242424;
+    text-transform: uppercase;
+    ;
   }
-  .responsive span,
-  .responsive span:before,
-  .responsive span:after {
+  .responsive span, .responsive span:before, .responsive span:after {
     cursor: pointer;
     border-radius: 2px;
     height: 4px;
@@ -277,10 +276,15 @@ h1, h2, h3, h4, h5, h6, a, p {
     padding-left: 0px !important;
     max-width: calc(100% - 20px) !important;
   }
+  #myTopnav span, #myTopnav span:before, #myTopnav span:after {
+    height: 2px;
+  }
 }
 
 /* ----------------------------------------- */
+
 /*                 MENU CSS                  */
+
 /* ----------------------------------------- */
 
 .main-menu-area {
@@ -306,7 +310,9 @@ img.main-menu-logo {
 }
 
 /* ----------------------------------------- */
+
 /*                POSTS CSS                  */
+
 /* ----------------------------------------- */
 
 .featured-img {
@@ -352,7 +358,9 @@ img.main-menu-logo {
 }
 
 /* ----------------------------------------- */
+
 /*                HOVER CSS                  */
+
 /* ----------------------------------------- */
 
 .whole-click {
@@ -406,9 +414,10 @@ img.main-menu-logo {
 }
 
 /* ----------------------------------------- */
-/*           BLOG DETAIL PAGE CSS            */
-/* ----------------------------------------- */
 
+/*           BLOG DETAIL PAGE CSS            */
+
+/* ----------------------------------------- */
 
 .blogdetail-page {
   max-width: 1120px !important;
@@ -597,9 +606,7 @@ img.main-menu-logo {
   margin-top: 15px;
 }
 
-i#insta-icon:hover,
-i#twitter-icon:hover,
-i#pinterest-icon:hover {
+i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
   color: rgba(0, 0, 0, 0.6) !important;
   transition: all .3s;
 }
@@ -656,7 +663,7 @@ i#pinterest-icon:hover {
   fill: #fff;
 }
 
-.footer-left > a {
+.footer-left>a {
   display: block;
   margin-bottom: 16px;
   width: 292px;
@@ -697,7 +704,7 @@ i#pinterest-icon:hover {
 }
 
 .about-widget h3 a {
-  color: #000;
+  color: #242424;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -731,7 +738,7 @@ i#pinterest-icon:hover {
 }
 
 @media (max-width: 499px) {
-  .mobile-test .article-footer { 
+  .mobile-test .article-footer {
     max-width: calc(100vw - 30px) !important;
   }
   .mobile-test .bg-grey div.column {
@@ -809,7 +816,7 @@ i#pinterest-icon:hover {
   margin-bottom: 24px;
 }
 
-.mobile-screen .footer-left > a {
+.mobile-screen .footer-left>a {
   display: block;
   margin-bottom: 42px;
   width: 100%;
@@ -821,7 +828,7 @@ i#pinterest-icon:hover {
 }
 
 .site-footer nav a {
-  color: black;
+  color: #4E598C;
 }
 
 .site-footer nav a:hover {
@@ -896,6 +903,7 @@ i#pinterest-icon:hover {
 }
 
 /* Home */
+
 .just {
   font-size: 0;
 }
@@ -909,8 +917,7 @@ i#pinterest-icon:hover {
   margin-bottom: 0px;
 }
 
-.col-1, .col-1-inner .widget, .col-1-inner .post,
-.col-3, .col-3-inner .widget, .col-3-inner .post {
+.col-1, .col-1-inner .widget, .col-1-inner .post, .col-3, .col-3-inner .widget, .col-3-inner .post {
   width: calc(33% - 30px);
   display: inline-block;
   vertical-align: top;
@@ -994,8 +1001,7 @@ i#pinterest-icon:hover {
   transition: all .5s;
 }
 
-.insta-parent:hover .insta-pic,
-.insta-parent:focus .insta-pic {
+.insta-parent:hover .insta-pic, .insta-parent:focus .insta-pic {
   -ms-transform: scale(1..05);
   -moz-transform: scale(1..05);
   -webkit-transform: scale(1.05);
@@ -1029,8 +1035,8 @@ i#pinterest-icon:hover {
 
 @media (max-width: 960px) {
   .mobile-screen .article-hero .hero-sidebar h1 {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 32px;
+    line-height: 40px !important;
     text-align: center !important;
     padding-bottom: 45px;
     padding-left: 30px;
@@ -1039,7 +1045,7 @@ i#pinterest-icon:hover {
     max-width: 100vw;
     margin-left: -30px;
   }
-  .mobile-screen .article-hero .hero-sidebar > img {
+  .mobile-screen .article-hero .hero-sidebar>img {
     margin-top: -10px;
     padding-left: 30px;
     width: calc(100%);
@@ -1055,6 +1061,7 @@ i#pinterest-icon:hover {
   }
   #myTopnav img {
     /* display: none; */
+    width: 180px !important;
     margin-left: 3px !important;
   }
   #myTopnav-fixed img {
@@ -1133,8 +1140,8 @@ i#pinterest-icon:hover {
     line-height: 34px;
   }
   .col-1 a.post, .col-1 .widget, .col-1-inner .widget, .col-1-inner a.post {
-      width: calc(100% - 20px);
-      display: block;
+    width: calc(100% - 20px);
+    display: block;
   }
   .insta-row {
     display: grid;
