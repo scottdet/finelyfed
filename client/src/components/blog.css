@@ -76,7 +76,7 @@ a, span {
 }
 
 .article-content a {
-  color: #242424;
+  color: #4E598C;
 }
 
 h1, h2, h6 {
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 4.5px;
-  color: #4E598C;
+  color: #242424;
   text-transform: uppercase;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -828,7 +828,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
 }
 
 .site-footer nav a {
-  color: #4E598C;
+  color: #242424;
 }
 
 .site-footer nav a:hover {
@@ -1036,7 +1036,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
 @media (max-width: 960px) {
   .mobile-screen .article-hero .hero-sidebar h1 {
     font-size: 32px;
-    line-height: 40px !important;
+    line-height: 48px !important;
     text-align: center !important;
     padding-bottom: 45px;
     padding-left: 30px;
