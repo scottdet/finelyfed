@@ -55,6 +55,8 @@ a.menu-item {
 
 .container.main-posts {
   background: #f8faff !important;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 p {
@@ -566,7 +568,7 @@ img.main-menu-logo {
 .site-footer {
   background-color: #f0f2fa;
   color: black;
-  padding-top: 75px;
+  padding-top: 45px;
   padding-bottom: 60px;
   margin-top: 30px;
 }
@@ -598,7 +600,7 @@ img.main-menu-logo {
 i#insta-icon:hover,
 i#twitter-icon:hover,
 i#pinterest-icon:hover {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.6) !important;
   transition: all .3s;
 }
 
@@ -818,8 +820,12 @@ i#pinterest-icon:hover {
   font-size: 12px;
 }
 
+.site-footer nav a {
+  color: black;
+}
+
 .site-footer nav a:hover {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .mobile-screen .site-footer nav {
@@ -957,7 +963,7 @@ i#pinterest-icon:hover {
 .watch {
   background: #f0f2fa;
   padding-top: 60px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
   margin-bottom: 60px;
   padding-left: 30px;
   padding-right: 30px;

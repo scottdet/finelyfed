@@ -116,14 +116,14 @@ class Layout extends Component {
                     <Grid.Column width={5}>
                       <div className="footer-left">
                         <NavLink to="/">
-                          <img src={logo_2} className="main-menu-logo" style={{ paddingLeft: '5px' }}/>
+                          <img src={logo} className="main-menu-logo" style={{ paddingLeft: '5px' }}/>
                         </NavLink>
                         <div className="footer-social">
                           <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                            <Icon id="insta-icon" name="instagram" style={{ color: 'white', fontSize: '18px' }}/>
+                            <Icon id="insta-icon" name="instagram" style={{ color: 'black', fontSize: '18px' }}/>
                           </a>
                           <a href="/">
-                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: 'white', fontSize: '18px' }}/>
+                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: 'black', fontSize: '18px' }}/>
                           </a>
                         </div>
                       </div>
@@ -137,7 +137,7 @@ class Layout extends Component {
                           <NavLink to="/wellness">WELLNESS</NavLink>
                           <NavLink to="/lifestyle" style={{ marginRight: '-6px' }}>LIFESTYLE</NavLink>
                         </nav>
-                        <p style={{ marginRight: '18px', color: 'white' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
+                        <p style={{ marginRight: '18px', color: 'black' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
                       </div>
                     </Grid.Column>
 
@@ -152,7 +152,7 @@ class Layout extends Component {
               <div className="wrapper just">
                 <div className="footer-left">
                   <NavLink to="/">
-                    <img src={logo_2} className="main-menu-logo" />
+                    <img src={logo} className="main-menu-logo" />
                   </NavLink>
                   <nav>
                     <NavLink to="/food">FOOD</NavLink>
