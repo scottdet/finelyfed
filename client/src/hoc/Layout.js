@@ -77,16 +77,16 @@ class Layout extends Component {
                 <li className="top-menu-item">
                   <NavLink to="/lifestyle" className="menu-item" id="last-item" onClick={()=>this.menuClick()}>LIFESTYLE</NavLink>
                 </li>
-                <li>
+                <li className="top-menu-item">
                   <NavLink to="/wellness" className="menu-item" onClick={()=>this.menuClick()}>WELLNESS</NavLink>
                 </li>
-                <li>
+                <li className="top-menu-item">
                   <NavLink to="/travel" className="menu-item" onClick={()=>this.menuClick()}>TRAVEL</NavLink>
                 </li>
-                <li>
+                <li className="top-menu-item">
                   <NavLink to="/food" className="menu-item" onClick={()=>this.menuClick()}>FOOD</NavLink>
                 </li>
-                <li>
+                <li className="top-menu-item">
                   <NavLink to="#" className="icon" onClick={() => this.myFunction()}><span></span></NavLink> 
                 </li>
               </ul>

@@ -112,6 +112,10 @@ h1, h2, h3, h4, h5, h6, a, p {
   transition: all .3s;
 }
 
+.top-menu-item .menu-item {
+  margin-top: 15px !important;
+}
+
 .topnav .menu-item {
   float: right;
   display: block;
