@@ -63,14 +63,15 @@ a.menu-item {
 }
 
 p {
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Overpass', sans-serif;
   letter-spacing: 0.15px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: normal;
 }
 
 a, span {
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Overpass', sans-serif;
   letter-spacing: 0.15px;
   font-weight: 600 !important;
 }
