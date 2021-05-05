@@ -15,7 +15,7 @@ import bailey from '../../components/images/bailey.png';
 function Screen({  pages, category }) {
 
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
-  
+  console.log(filteredPages)
   return (
     <div>
       <div className="blog-page">
@@ -75,7 +75,13 @@ function Screen({  pages, category }) {
                     <p> los angeles restaurant guide </p>
                   </div>
                   <div className="featured-summary" >
-                    <p> This is my unofficial love letter to Los Angeles. I've been in this city for over seven years, but I didn't start venturing out restaurant-wise until I graduated from college. Wrting this during the pandemic...</p>
+                    {filteredPages.map((filteredPage, index) => {
+                      if (filteredPage.slug === 'best-restaurants-in-los-angeles') {
+                        return (
+                          <p key={index}>{filteredPage.summary.split(/\s+/).slice(0, 50).join(" ")}...</p>
+                        )
+                      }
+                    })}
                     <div className="category">
                       <a href="/food/best-restaurants-in-los-angeles">
                         <span style={{ paddingLeft: '45px' }}> Read More >> </span>
