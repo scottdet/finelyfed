@@ -444,7 +444,7 @@ img.main-menu-logo {
   text-transform: uppercase;
   transition: all .3s;
   background-color: #f0f2fa;
-  width: 160px;
+  width: 170px;
   padding-left: 3px;
   margin-left: calc(50% - 80px);
   padding-top: 3px;
@@ -498,8 +498,8 @@ img.main-menu-logo {
 }
 
 .article-content h2 {
-  font-size: 34px;
-  letter-sspacing: 0.25px;
+  font-size: 1.5rem;
+  letter-spacing: 0.25px;
   padding-top: 10px;
   margin-bottom: 20px;
 }
