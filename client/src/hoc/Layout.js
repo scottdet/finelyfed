@@ -120,10 +120,10 @@ class Layout extends Component {
                         </NavLink>
                         <div className="footer-social">
                           <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                            <Icon id="insta-icon" name="instagram" style={{ color: 'black', fontSize: '18px' }}/>
+                            <Icon id="insta-icon" name="instagram" style={{ color: '#242424', fontSize: '18px' }}/>
                           </a>
                           <a href="/">
-                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: 'black', fontSize: '18px' }}/>
+                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: '#242424', fontSize: '18px' }}/>
                           </a>
                         </div>
                       </div>
@@ -137,7 +137,7 @@ class Layout extends Component {
                           <NavLink to="/wellness">WELLNESS</NavLink>
                           <NavLink to="/lifestyle" style={{ marginRight: '-6px' }}>LIFESTYLE</NavLink>
                         </nav>
-                        <p style={{ marginRight: '18px', color: 'black' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
+                        <p style={{ marginRight: '18px', color: '#242424' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
                       </div>
                     </Grid.Column>
 
@@ -162,16 +162,16 @@ class Layout extends Component {
                   </nav>
                   <div className="footer-social">
                     <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                      <Icon name="instagram" style={{ color: 'white', fontSize: '18px' }}/>
+                      <Icon name="instagram" style={{ color: '#242424', fontSize: '18px' }}/>
                     </a>
                     <a href="/">
-                      <Icon name="pinterest square" style={{ color: 'white', fontSize: '18px' }}/>
+                      <Icon name="pinterest square" style={{ color: '#242424', fontSize: '18px' }}/>
                     </a>
                   </div>
                 </div>
                 
                 <div className="footer-right">
-                  <p className="copyRight" style={{ color: 'white' }}>All rights reserved. © Finely Fed 2020</p>
+                  <p className="copyRight" style={{ color: '#242424' }}>All rights reserved. © Finely Fed 2020</p>
                 </div>
               </div>
             </section>
