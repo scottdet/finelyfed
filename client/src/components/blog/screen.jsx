@@ -14,9 +14,8 @@ import bailey from '../../components/images/bailey.png';
 
 
 function Screen({ pages, category }) {
-
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
-  console.log(filteredPages)
+
   return (
     <div>
       <div className="blog-page">
@@ -92,6 +91,7 @@ function Screen({ pages, category }) {
                   </span>
                 </span>
               </div>
+              <div className="featured-restaurant-bottom-effect" />
             </div>
 
             <div className="container watch">
@@ -149,7 +149,7 @@ function Screen({ pages, category }) {
             <div className="container main-posts">
               <div className="wrapper just">
                 {filteredPages.map((page, index) => (
-                  index > 2 ?
+                  index > 2 && index < 6 && page.slug !== 'best-ever-tuna-salad' ?
                     <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
@@ -167,10 +167,10 @@ function Screen({ pages, category }) {
               </div>
             </div>
 
-            <div className="container featured" style={{ marginTop: "0px" }}>
+            <div className="container featured" style={{ marginTop: '0px' }}>
+              <div className="featured-top-effect" />
               {filteredPages.map((filteredPage, index) => {
                 if (filteredPage.slug === 'best-ever-tuna-salad') {
-                  console.log(filteredPage);
                   return (
                     <div className="wrapper just" key={index}>
                       <span className="featuredSpan" style={{ display: 'flex', flexDirection: 'row' }}>
@@ -193,12 +193,34 @@ function Screen({ pages, category }) {
                   )
                 }
               })}
+              <div className="featured-bottom-effect" />
+            </div>
+
+            <div className="container main-posts">
+              <div className="wrapper just">
+                {filteredPages.map((page, index) => (
+                  index >= 6 && index < filteredPages.length - 1 && page.slug !== 'best-ever-tuna-salad' ?
+                    <div key={index} className="col-3">
+                      <PostPreview
+                        key={`blogpost-${page.title}-${page.created}`}
+                        title={page.title}
+                        summary={page.summary}
+                        categories={page.categories}
+                        created={page.created}
+                        featured_image={page.featured_image}
+                        url={page.url}
+                        slug={page.slug}
+                      />
+                    </div>
+                    : null
+                ))}
+              </div>
             </div>
           </>
           :
           <div className="container">
             <h1 className="text-center category-title">{category}</h1>
-            <div className="wrapper just">
+            <div className="wrapper just" style={{ marginBottom: '50px' }}>
               {filteredPages.map((page, index) => (
                 <div key={index} className="col-3">
                   <PostPreview

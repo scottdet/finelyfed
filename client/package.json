@@ -17,6 +17,7 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "latest",
     "react-ga": "^3.1.2",
+    "react-lottie": "^1.2.3",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"

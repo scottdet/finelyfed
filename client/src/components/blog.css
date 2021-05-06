@@ -950,6 +950,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
 
 .post {
   min-height: 380px;
+  margin-top: 28px;
   margin-bottom: 28px;
   position: relative;
   height: auto;
@@ -970,14 +971,14 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
   background: #8AA899;
   margin-top: 30px;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
+  position: relative;
 }
 
 .watch {
-  background: #f0f2fa;
+  background: #f4f2ed;
   padding-top: 60px;
-  padding-bottom: 30px;
-  margin-bottom: 60px;
+  padding-bottom: 90px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -1200,4 +1201,52 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
   .category span {
     padding-left: 0px !important;
   }
+}
+
+.footer-top-effect::after {
+  background: linear-gradient( 32deg, #f0f2fa 15px, transparent 15px), linear-gradient( -32deg, #f0f2fa 15px, transparent 15px) repeat-x;
+  background-size: 32px 32px;
+  content: '';
+  position: absolute;
+  margin-top: -60px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+}
+
+.featured-top-effect::after {
+  background: linear-gradient( 32deg, #8AA899 15px, transparent 15px), linear-gradient( -32deg, #8AA899 15px, transparent 15px) repeat-x;
+  background-size: 32px 32px;
+  content: '';
+  position: absolute;
+  margin-top: -30px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+}
+
+.featured-bottom-effect::after {
+  background: linear-gradient( 32deg, #f8faff 15px, transparent 15px), linear-gradient( -32deg, #f8faff 15px, transparent 15px) repeat-x;
+  background-size: 32px 32px;
+  content: '';
+  position: absolute;
+  margin-top: -30px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+}
+
+.featured-restaurant-bottom-effect::after {
+  background: linear-gradient( 32deg, #f4f2ed 15px, transparent 15px), linear-gradient( -32deg, #f4f2ed 15px, transparent 15px) repeat-x;
+  background-size: 32px 32px;
+  content: '';
+  position: absolute;
+  margin-top: -30px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
 }

@@ -44,15 +44,15 @@ class Layout extends Component {
     var mainLogo = document.getElementById("main-menu-logo");
     var fixedTopNav = document.getElementById("myTopnav-fixed");
     if (x.className === "topnav") {
-        x.className += " responsive";
-        fixedTopNav.style.display = 'block';
-        fixedTopNav.style.paddingBottom = '30px';
-        mainLogo.style.display = 'none';
+      x.className += " responsive";
+      fixedTopNav.style.display = 'block';
+      fixedTopNav.style.paddingBottom = '30px';
+      mainLogo.style.display = 'none';
     } else {
-        x.className = "topnav";
-        fixedTopNav.style.display = 'none';
-        x.style.paddingBottom = '40px';
-        mainLogo.style.display = 'block';
+      x.className = "topnav";
+      fixedTopNav.style.display = 'none';
+      x.style.paddingBottom = '40px';
+      mainLogo.style.display = 'block';
     }
   }
 
@@ -75,26 +75,26 @@ class Layout extends Component {
                   </p>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/lifestyle" className="menu-item" id="last-item" onClick={()=>this.menuClick()}>LIFESTYLE</NavLink>
+                  <NavLink to="/lifestyle" className="menu-item" id="last-item" onClick={() => this.menuClick()}>LIFESTYLE</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/wellness" className="menu-item" onClick={()=>this.menuClick()}>WELLNESS</NavLink>
+                  <NavLink to="/wellness" className="menu-item" onClick={() => this.menuClick()}>WELLNESS</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/travel" className="menu-item" onClick={()=>this.menuClick()}>TRAVEL</NavLink>
+                  <NavLink to="/travel" className="menu-item" onClick={() => this.menuClick()}>TRAVEL</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/food" className="menu-item" onClick={()=>this.menuClick()}>FOOD</NavLink>
+                  <NavLink to="/food" className="menu-item" onClick={() => this.menuClick()}>FOOD</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="#" className="icon" onClick={() => this.myFunction()}><span></span></NavLink> 
+                  <NavLink to="#" className="icon" onClick={() => this.myFunction()}><span></span></NavLink>
                 </li>
               </ul>
               <ul className="topnav" id="myTopnav-fixed">
                 <li>
                   <p>
                     <NavLink to="/">
-                      <img src={logo} className="main-menu-logo"/>
+                      <img src={logo} className="main-menu-logo" />
                     </NavLink>
                   </p>
                 </li>
@@ -108,7 +108,8 @@ class Layout extends Component {
             <Route path={blogDetailPaths} exact component={BlogDetail} />
           </Switch>
 
-          <section className="desktop-screen">
+          <section className="desktop-screen" style={{ position: 'relative' }}>
+            <div className="footer-top-effect" />
             <section className="site-footer">
               <div className="wrapper just">
                 <Grid>
@@ -116,14 +117,14 @@ class Layout extends Component {
                     <Grid.Column width={5}>
                       <div className="footer-left">
                         <NavLink to="/">
-                          <img src={logo} className="main-menu-logo" style={{ paddingLeft: '5px' }}/>
+                          <img src={logo} className="main-menu-logo" style={{ paddingLeft: '5px' }} />
                         </NavLink>
                         <div className="footer-social">
                           <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                            <Icon id="insta-icon" name="instagram" style={{ color: '#242424', fontSize: '18px' }}/>
+                            <Icon id="insta-icon" name="instagram" style={{ color: '#242424', fontSize: '18px' }} />
                           </a>
                           <a href="/">
-                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: '#242424', fontSize: '18px' }}/>
+                            <Icon id="pinterest-icon" name="pinterest square" style={{ color: '#242424', fontSize: '18px' }} />
                           </a>
                         </div>
                       </div>
@@ -162,14 +163,14 @@ class Layout extends Component {
                   </nav>
                   <div className="footer-social">
                     <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                      <Icon name="instagram" style={{ color: '#242424', fontSize: '18px' }}/>
+                      <Icon name="instagram" style={{ color: '#242424', fontSize: '18px' }} />
                     </a>
                     <a href="/">
-                      <Icon name="pinterest square" style={{ color: '#242424', fontSize: '18px' }}/>
+                      <Icon name="pinterest square" style={{ color: '#242424', fontSize: '18px' }} />
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="footer-right">
                   <p className="copyRight" style={{ color: '#242424' }}>All rights reserved. © Finely Fed 2020</p>
                 </div>
