@@ -19,6 +19,15 @@ const BlogDetail = ({ match }) => {
   useEffect(() => {
     const getPages = async () => {
       const { data } = await butter.post.list({ page: 1, page_size: 20 });
+      for (var i = 0; i < data.data.length; i++) {
+        if (data.data[i].categories[0].name === 'food') {
+          data.data[i].categories[0].name = "recipes";
+          data.data[i].categories[0].slug = "recipes";
+        } else if (data.data[i].categories[0].name === 'lifestyle') {
+          data.data[i].categories[0].name = "living";
+          data.data[i].categories[0].slug = "living";
+        }
+      }
 
       dispatch({
         type: "update_pages",

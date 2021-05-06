@@ -14,6 +14,7 @@ import bailey from '../../components/images/bailey.png';
 
 
 function Screen({ pages, category }) {
+  console.log(category);
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
 
   return (
@@ -83,7 +84,7 @@ function Screen({ pages, category }) {
                         }
                       })}
                       <div className="category">
-                        <Link to="/food/best-restaurants-in-los-angeles">
+                        <Link to="/recipes/best-restaurants-in-los-angeles">
                           <span style={{ paddingLeft: '45px' }}> Read More >> </span>
                         </Link>
                       </div>
@@ -91,7 +92,7 @@ function Screen({ pages, category }) {
                   </span>
                 </span>
               </div>
-              <div className="featured-restaurant-bottom-effect" />
+              {/* <div className="featured-restaurant-bottom-effect" /> */}
             </div>
 
             <div className="container watch">
@@ -168,7 +169,7 @@ function Screen({ pages, category }) {
             </div>
 
             <div className="container featured" style={{ marginTop: '0px' }}>
-              <div className="featured-top-effect" />
+              {/* <div className="featured-top-effect" /> */}
               {filteredPages.map((filteredPage, index) => {
                 if (filteredPage.slug === 'best-ever-tuna-salad') {
                   return (
@@ -193,7 +194,7 @@ function Screen({ pages, category }) {
                   )
                 }
               })}
-              <div className="featured-bottom-effect" />
+              {/* <div className="featured-bottom-effect" /> */}
             </div>
 
             <div className="container main-posts">

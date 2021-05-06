@@ -23,6 +23,15 @@ class Layout extends Component {
   async componentDidMount() {
     const [state, dispatch] = this.context;
     const { data } = await butter.post.list({ page: 1, page_size: 20 });
+    for (var i = 0; i < data.data.length; i++) {
+      if (data.data[i].categories[0].name === 'food') {
+        data.data[i].categories[0].name = "recipes";
+        data.data[i].categories[0].slug = "recipes";
+      } else if (data.data[i].categories[0].name === 'lifestyle') {
+        data.data[i].categories[0].name = "living";
+        data.data[i].categories[0].slug = "living";
+      }
+    }
 
     dispatch({
       type: "update_pages",
@@ -75,7 +84,7 @@ class Layout extends Component {
                   </p>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/lifestyle" className="menu-item" id="last-item" onClick={() => this.menuClick()}>LIFESTYLE</NavLink>
+                  <NavLink to="/living" className="menu-item" id="last-item" onClick={() => this.menuClick()}>LIVING</NavLink>
                 </li>
                 <li className="top-menu-item">
                   <NavLink to="/wellness" className="menu-item" onClick={() => this.menuClick()}>WELLNESS</NavLink>
@@ -84,7 +93,7 @@ class Layout extends Component {
                   <NavLink to="/travel" className="menu-item" onClick={() => this.menuClick()}>TRAVEL</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/food" className="menu-item" onClick={() => this.menuClick()}>FOOD</NavLink>
+                  <NavLink to="/recipes" className="menu-item" onClick={() => this.menuClick()}>RECIPES</NavLink>
                 </li>
                 <li className="top-menu-item">
                   <NavLink to="#" className="icon" onClick={() => this.myFunction()}><span></span></NavLink>
@@ -108,8 +117,8 @@ class Layout extends Component {
             <Route path={blogDetailPaths} exact component={BlogDetail} />
           </Switch>
 
-          <section className="desktop-screen" style={{ position: 'relative' }}>
-            <div className="footer-top-effect" />
+          <section className="desktop-screen" style={{ position: "relative" }}>
+            {/* <div className="footer-top-effect" /> */}
             <section className="site-footer">
               <div className="wrapper just">
                 <Grid>
@@ -133,7 +142,7 @@ class Layout extends Component {
                     <Grid.Column width={11}>
                       <div className="footer-right">
                         <nav>
-                          <NavLink to="/food">FOOD</NavLink>
+                          <NavLink to="/recipes">RECIPES</NavLink>
                           <NavLink to="/travel">TRAVEL</NavLink>
                           <NavLink to="/wellness">WELLNESS</NavLink>
                           <NavLink to="/lifestyle" style={{ marginRight: '-6px' }}>LIFESTYLE</NavLink>
@@ -156,10 +165,10 @@ class Layout extends Component {
                     <img src={logo} className="main-menu-logo" />
                   </NavLink>
                   <nav>
-                    <NavLink to="/food">FOOD</NavLink>
+                    <NavLink to="/recipes">RECIPES</NavLink>
                     <NavLink to="/travel" style={{ marginLeft: '3px' }}>TRAVEL</NavLink>
                     <NavLink to="/wellness">WELLNESS</NavLink>
-                    <NavLink to="/lifestyle">LIFESTYLE</NavLink>
+                    <NavLink to="/living">LIVING</NavLink>
                   </nav>
                   <div className="footer-social">
                     <a href="https://www.instagram.com/finelyfed/" target="_blank">

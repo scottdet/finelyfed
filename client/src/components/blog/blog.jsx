@@ -12,8 +12,16 @@ const Blog = ({ match }) => {
 
   useEffect(() => {
     const getPages = async () => {
-      const { data } = await butter.post.list({ page: 1, page_size: 12 });
-      console.log(data);
+      let { data } = await butter.post.list({ page: 1, page_size: 12 });
+      for (var i = 0; i < data.data.length; i++) {
+        if (data.data[i].categories[0].name === 'food') {
+          data.data[i].categories[0].name = "recipes";
+          data.data[i].categories[0].slug = "recipes";
+        } else if (data.data[i].categories[0].name === 'lifestyle') {
+          data.data[i].categories[0].name = "living";
+          data.data[i].categories[0].slug = "living";
+        }
+      }
 
       dispatch({
         type: "update_pages",
@@ -28,14 +36,14 @@ const Blog = ({ match }) => {
     ReactGA.initialize('UA-188118979-2');
     if (paths[1] === "") {
       ReactGA.pageview('/Home');
-    } else if (paths[1] === "food") {
-      ReactGA.pageview('/Food');
+    } else if (paths[1] === "recipes") {
+      ReactGA.pageview('/Recipes');
     } else if (paths[1] === "travel") {
       ReactGA.pageview('/Travel');
     } else if (paths[1] === "wellness") {
       ReactGA.pageview('/Wellness');
-    } else if (paths[1] === "lifestyle") {
-      ReactGA.pageview('/LifeStyle');
+    } else if (paths[1] === "living") {
+      ReactGA.pageview('/Living');
     }
   }, [paths[1]])
 

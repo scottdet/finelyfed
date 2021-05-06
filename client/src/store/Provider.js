@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import { GlobalContext } from './Context';
 
 const initialState = {
-  categories: ["All", "travel", "lifestyle", "food", "wellness"],
+  categories: ["All", "travel", "living", "recipes", "wellness"],
   pages: {
     data: [],
     meta: {}
