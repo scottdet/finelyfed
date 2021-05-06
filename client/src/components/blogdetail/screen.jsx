@@ -20,10 +20,10 @@ const Screen = ({
   unfilteredPages
 }) => {
   const [randomfilteredPages, setFilteredPages] = useState(filteredPages);
-  
+
   useEffect(() => {
     // Random Function
-    var currentIndex = filteredPages.length; 
+    var currentIndex = filteredPages.length;
     var otherIndex = unfilteredPages.length;
     var temporaryValue = 0;
     var randomIndex = 0;
@@ -40,7 +40,7 @@ const Screen = ({
         count += 1;
         if (count >= 3) {
           count = filteredPages.length - 3;
-          array.splice(0,count);
+          array.splice(0, count);
           return array;
         }
       }
@@ -94,7 +94,7 @@ const Screen = ({
             </div>
           </div>
         </div>
-        <div className="bg-grey">
+        <div className="bg-grey" style={{ marginTop: '100px' }}>
           <div className="article-footer">
             <Grid divided="vertically" style={{ paddingLeft: '24px', paddingRight: '24px' }}>
               <Grid.Row columns={3}>
@@ -111,7 +111,7 @@ const Screen = ({
                         slug={page.slug}
                       />
                     </Grid.Column>
-                ))}
+                  ))}
               </Grid.Row>
             </Grid>
           </div>
@@ -140,21 +140,21 @@ const Screen = ({
           </div>
           <div className="article-main">
             <div className="article-sidebar">
-          </div>
+            </div>
             <div className="article-content" dangerouslySetInnerHTML={{ __html: body }}></div>
           </div>
         </div>
-        
-        <div className="bg-grey">
+
+        <div className="bg-grey" style={{ marginTop: '100px !important' }}>
           <div className="article-footer">
             <Grid className="two-sections" divided="vertically">
               <Grid.Row columns={2}>
                 {
                   randomfilteredPages && randomfilteredPages.map((page, index) => (
                     <Grid.Column key={index}>
-                      { index < 2 ? 
+                      { index < 2 ?
                         <PostPreview
-                          key = {page.created}
+                          key={page.created}
                           title={page.title}
                           summary={page.summary}
                           categories={page.categories}
@@ -162,9 +162,9 @@ const Screen = ({
                           url={page.url}
                           slug={page.slug}
                         />
-                      : null}
+                        : null}
                     </Grid.Column>
-                ))}
+                  ))}
               </Grid.Row>
             </Grid>
             <Grid className="one-section" divided="vertically">
@@ -173,7 +173,7 @@ const Screen = ({
                   randomfilteredPages && randomfilteredPages.map((page, index) => (
                     <Grid.Column key={index}>
                       <PostPreview
-                        key = {page.created}
+                        key={page.created}
                         title={page.title}
                         summary={page.summary}
                         categories={page.categories}
@@ -182,7 +182,7 @@ const Screen = ({
                         slug={page.slug}
                       />
                     </Grid.Column>
-                ))}
+                  ))}
               </Grid.Row>
             </Grid>
           </div>

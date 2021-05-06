@@ -544,7 +544,7 @@ img.main-menu-logo {
 .bg-grey {
   background-color: #8aa899;
   padding-top: 50px !important;
-  margin-top: 71px !important;
+  margin-top: 71px;
   padding-bottom: 30px !important;
   margin-bottom: -30px !important;
 }

@@ -98,7 +98,7 @@ function Screen({ pages, category }) {
             <div className="container watch">
               <div className="blog-title" style={{ textAlign: 'center', paddingBottom: '30px' }}>
                 <a href="https://www.instagram.com/finelyfed/" target="_blank">
-                  <p style={{ color: 'black' }}> @finelyfed </p>
+                  <p style={{ color: 'black', fontFamily: 'Marcellus' }}> @finelyfed </p>
                 </a>
               </div>
 
