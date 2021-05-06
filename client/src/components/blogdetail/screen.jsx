@@ -94,7 +94,7 @@ const Screen = ({
             </div>
           </div>
         </div>
-        <div className="bg-grey" style={{ marginTop: '100px' }}>
+        <div className="bg-grey" style={{ marginTop: '150px' }}>
           <div className="article-footer">
             <Grid divided="vertically" style={{ paddingLeft: '24px', paddingRight: '24px' }}>
               <Grid.Row columns={3}>
@@ -145,7 +145,7 @@ const Screen = ({
           </div>
         </div>
 
-        <div className="bg-grey" style={{ marginTop: '100px !important' }}>
+        <div className="bg-grey" style={{ marginTop: '100px' }}>
           <div className="article-footer">
             <Grid className="two-sections" divided="vertically">
               <Grid.Row columns={2}>
