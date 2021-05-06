@@ -146,8 +146,28 @@ function Screen({ pages, category }) {
               </div>
             </div>
 
+            <div className="container main-posts">
+              <div className="wrapper just">
+                {filteredPages.map((page, index) => (
+                  index > 2 ?
+                    <div key={index} className="col-3">
+                      <PostPreview
+                        key={`blogpost-${page.title}-${page.created}`}
+                        title={page.title}
+                        summary={page.summary}
+                        categories={page.categories}
+                        created={page.created}
+                        featured_image={page.featured_image}
+                        url={page.url}
+                        slug={page.slug}
+                      />
+                    </div>
+                    : null
+                ))}
+              </div>
+            </div>
 
-            <div className="container featured">
+            <div className="container featured" style={{ marginTop: "0px" }}>
               {filteredPages.map((filteredPage, index) => {
                 if (filteredPage.slug === 'best-ever-tuna-salad') {
                   console.log(filteredPage);
@@ -174,27 +194,6 @@ function Screen({ pages, category }) {
                 }
               })}
             </div>
-
-            <div className="container main-posts">
-              <div className="wrapper just">
-                {filteredPages.map((page, index) => (
-                  index > 2 ?
-                    <div key={index} className="col-3">
-                      <PostPreview
-                        key={`blogpost-${page.title}-${page.created}`}
-                        title={page.title}
-                        summary={page.summary}
-                        categories={page.categories}
-                        created={page.created}
-                        featured_image={page.featured_image}
-                        url={page.url}
-                        slug={page.slug}
-                      />
-                    </div>
-                    : null
-                ))}
-              </div>
-            </div>
           </>
           :
           <div className="container">
@@ -214,6 +213,58 @@ function Screen({ pages, category }) {
                   />
                 </div>
               ))}
+            </div>
+
+            <div className="container watch" style={{ background: "#8AA899", paddingBottom: '70px' }}>
+              <div className="blog-title" style={{ textAlign: 'center', paddingBottom: '30px' }}>
+                <a href="https://www.instagram.com/finelyfed/" target="_blank">
+                  <p style={{ color: 'white' }}> @finelyfed </p>
+                </a>
+              </div>
+
+              <div className="insta-row">
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/B8u4GPIBGag/" target="_blank">
+                    <img className="insta-pic" src={bailey} style={{ display: 'block' }} />
+                  </a>
+                </div>
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/CHq2k7oHEJ3/" target="_blank">
+                    <img className="insta-pic" src={ospi} style={{ display: 'block' }} />
+                  </a>
+                </div>
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/CCbpxCXpudX/" target="_blank">
+                    <img className="insta-pic" src={house} style={{ display: 'block' }} />
+                  </a>
+                </div>
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/B38Q-B0ge3M/" target="_blank">
+                    <img className="insta-pic" src={sushi} style={{ display: 'block' }} />
+                  </a>
+                </div>
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/CFIcROQnylW/" target="_blank">
+                    <img className="insta-pic" src={colorado} style={{ display: 'block' }} />
+                    <Icon name='clone'
+                      style={{
+                        color: 'white',
+                        position: 'absolute',
+                        top: '9px',
+                        left: 'calc(100% - 33px)',
+                        fontSize: '18px',
+                        fontWeight: '100',
+                        transform: 'rotate(-90deg)'
+                      }}
+                    />
+                  </a>
+                </div>
+                <div className="insta-parent" style={{ position: 'relative' }}>
+                  <a href="https://www.instagram.com/p/CCPTAW1syOp/" target="_blank">
+                    <img className="insta-pic" src={bowl} style={{ display: 'block' }} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         }
