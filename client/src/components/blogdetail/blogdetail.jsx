@@ -26,6 +26,9 @@ const BlogDetail = ({ match }) => {
         } else if (data.data[i].categories[0].name === 'lifestyle') {
           data.data[i].categories[0].name = "living";
           data.data[i].categories[0].slug = "living";
+        } else if (data.data[i].categories[0].name === 'wellness') {
+          data.data[i].categories[0].name = "health & wellness";
+          data.data[i].categories[0].slug = "health & wellness";
         }
       }
 

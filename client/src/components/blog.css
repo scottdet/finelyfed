@@ -153,6 +153,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 4.5px;
+  word-spacing: -5px;
   color: #242424;
   text-transform: uppercase;
   -webkit-transition: all .3s;
@@ -631,6 +632,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
   font-size: 16px;
   line-height: 17px;
   letter-spacing: 4.5px;
+  word-spacing: -5px;
   text-transform: uppercase;
   -webkit-transition: all .3s;
   transition: all .3s;

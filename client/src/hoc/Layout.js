@@ -30,6 +30,9 @@ class Layout extends Component {
       } else if (data.data[i].categories[0].name === 'lifestyle') {
         data.data[i].categories[0].name = "living";
         data.data[i].categories[0].slug = "living";
+      } else if (data.data[i].categories[0].name === 'wellness') {
+        data.data[i].categories[0].name = "health & wellness";
+        data.data[i].categories[0].slug = "health & wellness";
       }
     }
 
@@ -87,7 +90,7 @@ class Layout extends Component {
                   <NavLink to="/living" className="menu-item" id="last-item" onClick={() => this.menuClick()}>LIVING</NavLink>
                 </li>
                 <li className="top-menu-item">
-                  <NavLink to="/wellness" className="menu-item" onClick={() => this.menuClick()}>WELLNESS</NavLink>
+                  <NavLink to="/health & wellness" className="menu-item" onClick={() => this.menuClick()}>HEALTH & WELLNESS</NavLink>
                 </li>
                 <li className="top-menu-item">
                   <NavLink to="/travel" className="menu-item" onClick={() => this.menuClick()}>TRAVEL</NavLink>
@@ -144,7 +147,7 @@ class Layout extends Component {
                         <nav>
                           <NavLink to="/recipes">RECIPES</NavLink>
                           <NavLink to="/travel">TRAVEL</NavLink>
-                          <NavLink to="/wellness">WELLNESS</NavLink>
+                          <NavLink to="/health & wellness">HEALTH & WELLNESS</NavLink>
                           <NavLink to="/lifestyle" style={{ marginRight: '-6px' }}>LIFESTYLE</NavLink>
                         </nav>
                         <p style={{ marginRight: '18px', color: '#242424' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
@@ -167,7 +170,7 @@ class Layout extends Component {
                   <nav>
                     <NavLink to="/recipes">RECIPES</NavLink>
                     <NavLink to="/travel" style={{ marginLeft: '3px' }}>TRAVEL</NavLink>
-                    <NavLink to="/wellness">WELLNESS</NavLink>
+                    <NavLink to="/health & wellness">HEALTH & WELLNESS</NavLink>
                     <NavLink to="/living">LIVING</NavLink>
                   </nav>
                   <div className="footer-social">
