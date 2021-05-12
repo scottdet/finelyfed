@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 4.5px;
   word-spacing: -5px;
   color: #242424;
@@ -629,7 +629,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
 }
 
 .site-footer nav a {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 17px;
   letter-spacing: 4.5px;
   word-spacing: -5px;
