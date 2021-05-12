@@ -78,6 +78,12 @@ a, span {
 
 .article-content a {
   color: #4E598C;
+  text-decoration: underline;
+  text-decoration-color: #8aa899;
+}
+
+.article-content a:hover {
+  color: #8aa899;
 }
 
 h1, h2, h6 {
