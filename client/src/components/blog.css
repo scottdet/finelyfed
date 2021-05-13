@@ -79,6 +79,7 @@ a, span {
 .article-content a {
   display: inline;
   color: #242424;
+  padding-bottom: 2px;
   background-size: 2px 2px;
   background-repeat: repeat-x;
   background-position: 0 100%;
