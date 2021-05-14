@@ -445,9 +445,9 @@ img.main-menu-logo {
 }
 
 .post-date {
-  display: none;
   font-family: 'Marcellus', serif;
   display: flex;
+  display: none !important;
   justify-content: center;
   align-self: center;
   text-decoration: none;
