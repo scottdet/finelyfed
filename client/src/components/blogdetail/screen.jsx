@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Grid, Divider } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import PostPreview from "../blog/PostPreview";
+import { NavLink } from "react-router-dom";
 
 
 const Screen = ({
@@ -68,6 +69,11 @@ const Screen = ({
       <Divider style={{ borderTop: '1px solid #f2f2f2', borderBottom: '0px' }} />
       <section className="desktop-screen" style={{ paddingTop: '42px' }}>
         <div className='blogdetail-page wrapper'>
+          <div className="category">
+            <NavLink to={`/${categories[0].name}`}>
+              {categories[0].name}
+            </NavLink>
+          </div>
           <div className="hero-sidebar">
             <h1 className="blog-title-h1"> {title} </h1>
           </div>

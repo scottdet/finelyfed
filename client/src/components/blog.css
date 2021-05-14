@@ -438,6 +438,15 @@ img.main-menu-logo {
   padding-top: 20px;
 }
 
+.blogdetail-page .category{
+  text-align: center;
+}
+
+.blogdetail-page .category a {
+  color: #8AA899 !important;
+  font-family: 'Marcellus';
+}
+
 .article-hero {
   vertical-align: top;
   text-align: justify;
