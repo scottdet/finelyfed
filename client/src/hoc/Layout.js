@@ -148,7 +148,7 @@ class Layout extends Component {
                           <NavLink to="/recipes">RECIPES</NavLink>
                           <NavLink to="/travel">TRAVEL</NavLink>
                           <NavLink to="/health & wellness">HEALTH & WELLNESS</NavLink>
-                          <NavLink to="/lifestyle" style={{ marginRight: '-6px' }}>LIFESTYLE</NavLink>
+                          <NavLink to="/living" style={{ marginRight: '-6px' }}>LIVING</NavLink>
                         </nav>
                         <p style={{ marginRight: '18px', color: '#242424' }}>ALL RIGHTS RESERVED © FINELY FED 2020</p>
                       </div>
