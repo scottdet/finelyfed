@@ -200,7 +200,7 @@ function Screen({ pages, category }) {
             <div className="container main-posts">
               <div className="wrapper just">
                 {filteredPages.map((page, index) => (
-                  index >= 7 && index < filteredPages.length - 1 && page.slug !== 'best-ever-tuna-salad' ?
+                  index >= 7 && index < filteredPages.length && page.slug !== 'best-ever-tuna-salad' ?
                     <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
