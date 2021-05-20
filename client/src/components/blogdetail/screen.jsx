@@ -127,6 +127,11 @@ const Screen = ({
       <section className="mobile-screen">
         <div className="wrapper">
           <div className="article-hero">
+            <div className="category">
+              <NavLink to={`/${categories[0].name}`}>
+                {categories[0].name}
+              </NavLink>
+            </div>
             <div className="hero-sidebar">
               <h1> {title} </h1>
               <div className="post-date mobile">

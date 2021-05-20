@@ -445,6 +445,22 @@ img.main-menu-logo {
 .blogdetail-page .category a {
   color: #8AA899 !important;
   font-family: 'Marcellus';
+  text-transform: uppercase;
+}
+
+.article-hero .category {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: 25px;
+  left: 10px;
+}
+
+.article-hero .category a {
+  color: #8AA899 !important;
+  font-family: 'Marcellus';
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .article-hero {
