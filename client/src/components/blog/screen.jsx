@@ -84,7 +84,7 @@ function Screen({ pages, category }) {
                         }
                       })}
                       <div className="category">
-                        <Link to="/recipes/best-restaurants-in-los-angeles">
+                        <Link to="/travel/best-restaurants-in-los-angeles">
                           <span style={{ paddingLeft: '45px' }}> Read More >> </span>
                         </Link>
                       </div>
