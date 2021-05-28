@@ -12,7 +12,8 @@ const Blog = ({ match }) => {
 
   useEffect(() => {
     const getPages = async () => {
-      let { data } = await butter.post.list({ page: 1, page_size: 12 });
+      let { data } = await butter.post.list({ page: 1, page_size: 20 });
+      console.log(data);
       for (var i = 0; i < data.data.length; i++) {
         if (data.data[i].categories[0].name === 'food') {
           data.data[i].categories[0].name = "recipes";

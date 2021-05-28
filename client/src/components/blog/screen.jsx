@@ -14,7 +14,6 @@ import bailey from '../../components/images/bailey.png';
 
 
 function Screen({ pages, category }) {
-  console.log(category);
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
 
   return (
@@ -50,16 +49,16 @@ function Screen({ pages, category }) {
                         slug={filteredPages[1].slug}
                       />
                       : null}
-                    {filteredPages.length > 3 ?
+                    {filteredPages.length > 2 ?
                       <PostPreview
-                        key={`blogpost-${filteredPages[3].title}-${filteredPages[3].created}`}
-                        title={filteredPages[3].title}
-                        summary={filteredPages[3].summary}
-                        categories={filteredPages[3].categories}
-                        created={filteredPages[3].created}
-                        featured_image={filteredPages[3].featured_image}
-                        url={filteredPages[3].url}
-                        slug={filteredPages[3].slug}
+                        key={`blogpost-${filteredPages[2].title}-${filteredPages[2].created}`}
+                        title={filteredPages[2].title}
+                        summary={filteredPages[2].summary}
+                        categories={filteredPages[2].categories}
+                        created={filteredPages[2].created}
+                        featured_image={filteredPages[2].featured_image}
+                        url={filteredPages[2].url}
+                        slug={filteredPages[2].slug}
                       />
                       : null}
                   </div>
@@ -200,7 +199,7 @@ function Screen({ pages, category }) {
             <div className="container main-posts">
               <div className="wrapper just">
                 {filteredPages.map((page, index) => (
-                  index >= 7 && index < filteredPages.length && page.slug !== 'best-ever-tuna-salad' ?
+                  index > 6 && index < filteredPages.length && page.slug !== 'best-ever-tuna-salad' ?
                     <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
