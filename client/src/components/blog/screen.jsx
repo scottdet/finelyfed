@@ -13,9 +13,8 @@ import sushi from '../../components/images/sushi.png';
 import bailey from '../../components/images/bailey.png';
 
 
-function Screen({ pages, category }) {
+function Screen({ pages, category, mediaURLs }) {
   const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
-
   return (
     <div>
       <div className="blog-page">
@@ -102,7 +101,18 @@ function Screen({ pages, category }) {
               </div>
 
               <div className="insta-row">
-                <div className="insta-parent" style={{ position: 'relative' }}>
+                {mediaURLs && mediaURLs.length > 0 ?
+                  mediaURLs.map((media, index) => {
+                    return (
+                      <div key={index} className="insta-parent" style={{ position: 'relative' }}>
+                        <a href={`${media.permalink}`} target="_blank">
+                          <img className="insta-pic" src={`${media.media_url}`} style={{ display: 'block' }} />
+                        </a>
+                      </div>
+                    )
+                  })
+                  : null}
+                {/* <div className="insta-parent" style={{ position: 'relative' }}>
                   <a href="https://www.instagram.com/p/B8u4GPIBGag/" target="_blank">
                     <img className="insta-pic" src={bailey} style={{ display: 'block' }} />
                   </a>
@@ -142,7 +152,7 @@ function Screen({ pages, category }) {
                   <a href="https://www.instagram.com/p/CCPTAW1syOp/" target="_blank">
                     <img className="insta-pic" src={bowl} style={{ display: 'block' }} />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -245,7 +255,18 @@ function Screen({ pages, category }) {
               </div>
 
               <div className="insta-row">
-                <div className="insta-parent" style={{ position: 'relative' }}>
+                {mediaURLs && mediaURLs.length > 0 ?
+                  mediaURLs.map((media, index) => {
+                    return (
+                      <div key={index} className="insta-parent" style={{ position: 'relative' }}>
+                        <a href={`${media.permalink}`} target="_blank">
+                          <img className="insta-pic" src={`${media.media_url}`} style={{ display: 'block' }} />
+                        </a>
+                      </div>
+                    )
+                  })
+                  : null}
+                {/* <div className="insta-parent" style={{ position: 'relative' }}>
                   <a href="https://www.instagram.com/p/B8u4GPIBGag/" target="_blank">
                     <img className="insta-pic" src={bailey} style={{ display: 'block' }} />
                   </a>
@@ -285,7 +306,7 @@ function Screen({ pages, category }) {
                   <a href="https://www.instagram.com/p/CCPTAW1syOp/" target="_blank">
                     <img className="insta-pic" src={bowl} style={{ display: 'block' }} />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

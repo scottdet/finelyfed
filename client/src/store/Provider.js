@@ -6,7 +6,8 @@ const initialState = {
   pages: {
     data: [],
     meta: {}
-  }
+  },
+  mediaURLs: [],
 };
 
 const reducer = (state, action) => {
@@ -16,6 +17,12 @@ const reducer = (state, action) => {
         ...state,
         pages: action.data
       };
+    
+    case "get_instagram_images":
+        return {
+          ...state,
+          mediaURLs: action.mediaURLs
+        }
 
     default:
       throw new Error("Wrong action type got dispatched");

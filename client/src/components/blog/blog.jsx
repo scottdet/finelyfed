@@ -53,7 +53,7 @@ const Blog = ({ match }) => {
 
   return (
     <Segment vertical>
-      <Screen pages={state.pages.data} category={category} />
+      <Screen pages={state.pages.data} category={category} mediaURLs={state.mediaURLs} />
     </Segment>
   );
 };

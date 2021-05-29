@@ -36,10 +36,28 @@ class Layout extends Component {
       }
     }
 
+    let mediaURLs = [];
+    const access_token = "IGQVJYeF9iOHR4bXgzamtTQlF5UVlJa0ZATRzhVVzRjWDR1X2dtRGUtcUpkQzMzamxyd2J1X3VIYWlLaHBHUEd0ai1tX1dRMjZAvUTE3T0dfQ3VPaFhad2twOXVLVXBrNldYanhRcTAzNk8xdlQwZAS1ZAdgZDZD";
+    await fetch(`https://graph.instagram.com/v10.0/17841408078439206/media?access_token=${access_token}&limit=10`)
+      .then(res => res.json())
+      .then(
+        async (result) => {
+          for (var i = 0; i < 6; i++) {
+            await fetch(`https://graph.instagram.com/${result.data[i].id}?fields=id,media_type,permalink,media_url,username,timestamp&access_token=${access_token}`).then(res => res.json()).then((media) => {
+              mediaURLs.push({ media_url: media.media_url, permalink: media.permalink });
+            })
+          }
+        }
+      )
+
     dispatch({
       type: "update_pages",
       data
     });
+    dispatch({
+      type: "get_instagram_images",
+      mediaURLs
+    })
   }
   menuClick = () => {
     var x = document.getElementById("myTopnav");
