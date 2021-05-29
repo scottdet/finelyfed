@@ -98,6 +98,10 @@ h1 {
   line-height: 80px !important;
 }
 
+.article-content h1 {
+  line-height: 40px !important;
+}
+
 h1, h2, h3, h4, h5, h6, a, p {
   -webkit-font-smoothing: antialiased !important;
 }
