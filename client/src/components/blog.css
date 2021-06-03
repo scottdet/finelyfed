@@ -562,6 +562,7 @@ img.main-menu-logo {
   position: relative;
   margin-top: 5px;
   bottom: 0px;
+  padding-bottom: 0px !important;
 }
 
 .article-content pre {
