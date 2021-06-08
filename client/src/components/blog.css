@@ -1357,3 +1357,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
     opacity: 1;
   }
 }
+
+.height-30 {
+  min-height: 30px;
+}
