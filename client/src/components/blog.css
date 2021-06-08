@@ -1361,3 +1361,7 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
 .height-30 {
   min-height: 30px;
 }
+
+.mb-0 {
+  margin-bottom: -3px !important;
+}
