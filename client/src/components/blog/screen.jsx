@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 import PostPreview from "./PostPreview";
 import 'semantic-ui-css/semantic.min.css';
 import { Icon } from 'semantic-ui-react';
-import featured from '../../components/images/guide.png';
-import bowl from '../../components/images/bowl.png';
-import colorado from '../../components/images/colorado.png';
-import house from '../../components/images/house.png';
-import japan from '../../components/images/japan.png';
-import ospi from '../../components/images/ospi.png';
-import sushi from '../../components/images/sushi.png';
-import bailey from '../../components/images/bailey.png';
+import featured from '../../components/images/guide.jpeg';
 
 
 function Screen({ pages, category, mediaURLs }) {
-  const filteredPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
+  const allPages = category === "All" ? pages : pages.filter(page => (page.categories.length > 0 ? page.categories[0].name === category : false));
+
+  let filteredPages = [];
+  for (var i = 0; i < allPages.length; i++) {
+    if (allPages[i].slug !== "best-restaurants-in-los-angeles" && allPages[i].slug !== "best-ever-tuna-salad") {
+      filteredPages.push(allPages[i]);
+    }
+  }
+
   return (
     <div>
       <div className="blog-page">
@@ -71,13 +72,13 @@ function Screen({ pages, category, mediaURLs }) {
                   <img src={featured} className="featured-img" />
                   <span style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <div className="featured-title" >
-                      <p> los angeles restaurant guide </p>
+                      <p>  los angeles restaurant guide  </p>
                     </div>
                     <div className="featured-summary" >
-                      {filteredPages.map((filteredPage, index) => {
+                      {allPages.map((filteredPage, index) => {
                         if (filteredPage.slug === 'best-restaurants-in-los-angeles') {
                           return (
-                            <p key={index}>{filteredPage.summary.split(/\s+/).slice(0, 50).join(" ")}...</p>
+                            <p key={index}>This guide is my unofficial love letter to Los Angeles. I've been in this city for over seven years, and the food has captivated me since the start. The sheer number of restaurants can be overwhelming, and I am definitely a bit neurotic in my quest to discover the best spots in LA.</p>
                           )
                         }
                       })}
@@ -159,7 +160,7 @@ function Screen({ pages, category, mediaURLs }) {
             <div className="container main-posts">
               <div className="wrapper just">
                 {filteredPages.map((page, index) => (
-                  index > 3 && index < 7 && page.slug !== 'best-ever-tuna-salad' ?
+                  index >= 3 && index < 6 ?
                     <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
@@ -179,7 +180,7 @@ function Screen({ pages, category, mediaURLs }) {
 
             <div className="container featured" style={{ marginTop: '0px' }}>
               {/* <div className="featured-top-effect" /> */}
-              {filteredPages.map((filteredPage, index) => {
+              {allPages.map((filteredPage, index) => {
                 if (filteredPage.slug === 'best-ever-tuna-salad') {
                   return (
                     <div className="wrapper just" key={index}>
@@ -209,7 +210,7 @@ function Screen({ pages, category, mediaURLs }) {
             <div className="container main-posts">
               <div className="wrapper just">
                 {filteredPages.map((page, index) => (
-                  index > 6 && index < filteredPages.length && page.slug !== 'best-ever-tuna-salad' ?
+                  index >= 6 && index < filteredPages.length && page.slug !== 'best-ever-tuna-salad' ?
                     <div key={index} className="col-3">
                       <PostPreview
                         key={`blogpost-${page.title}-${page.created}`}
