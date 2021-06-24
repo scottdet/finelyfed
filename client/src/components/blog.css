@@ -545,6 +545,12 @@ img.main-menu-logo {
   margin-bottom: 20px;
 }
 
+.article-content h2 img {
+  position: relative;
+  top: -15px;
+  margin-bottom: -5px;
+}
+
 .article-content h3 {
   font-size: 20px;
   line-height: 20px;
