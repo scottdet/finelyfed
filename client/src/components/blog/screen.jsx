@@ -11,7 +11,11 @@ function Screen({ pages, category, mediaURLs }) {
 
   let filteredPages = [];
   for (var i = 0; i < allPages.length; i++) {
-    if (allPages[i].slug !== "best-restaurants-in-los-angeles" && allPages[i].slug !== "best-ever-tuna-salad") {
+    if (category === "All") {
+      if (allPages[i].slug !== "best-restaurants-in-los-angeles" && allPages[i].slug !== "best-ever-tuna-salad") {
+        filteredPages.push(allPages[i]);
+      }
+    } else {
       filteredPages.push(allPages[i]);
     }
   }
@@ -91,7 +95,6 @@ function Screen({ pages, category, mediaURLs }) {
                   </span>
                 </span>
               </div>
-              {/* <div className="featured-restaurant-bottom-effect" /> */}
             </div>
 
             <div className="container watch">
@@ -113,47 +116,6 @@ function Screen({ pages, category, mediaURLs }) {
                     )
                   })
                   : null}
-                {/* <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/B8u4GPIBGag/" target="_blank">
-                    <img className="insta-pic" src={bailey} style={{ display: 'block' }} />
-                  </a>
-                </div>
-                <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/CHq2k7oHEJ3/" target="_blank">
-                    <img className="insta-pic" src={ospi} style={{ display: 'block' }} />
-                  </a>
-                </div>
-                <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/CCbpxCXpudX/" target="_blank">
-                    <img className="insta-pic" src={house} style={{ display: 'block' }} />
-                  </a>
-                </div>
-                <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/B38Q-B0ge3M/" target="_blank">
-                    <img className="insta-pic" src={sushi} style={{ display: 'block' }} />
-                  </a>
-                </div>
-                <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/CFIcROQnylW/" target="_blank">
-                    <img className="insta-pic" src={colorado} style={{ display: 'block' }} />
-                    <Icon name='clone'
-                      style={{
-                        color: 'white',
-                        position: 'absolute',
-                        top: '9px',
-                        left: 'calc(100% - 33px)',
-                        fontSize: '18px',
-                        fontWeight: '100',
-                        transform: 'rotate(-90deg)'
-                      }}
-                    />
-                  </a>
-                </div>
-                <div className="insta-parent" style={{ position: 'relative' }}>
-                  <a href="https://www.instagram.com/p/CCPTAW1syOp/" target="_blank">
-                    <img className="insta-pic" src={bowl} style={{ display: 'block' }} />
-                  </a>
-                </div> */}
               </div>
             </div>
 

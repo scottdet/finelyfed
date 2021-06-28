@@ -1224,10 +1224,10 @@ i#insta-icon:hover, i#twitter-icon:hover, i#pinterest-icon:hover {
   div.insta-parent:nth-child(2n) {
     display: block !important;
   }
-  div.insta-parent:nth-child(3) {
+  div.insta-parent:nth-child(5) {
     display: none !important;
   }
-  div.insta-parent:nth-child(4) {
+  div.insta-parent:nth-child(6) {
     display: none !important;
   }
   .insta-pic {
