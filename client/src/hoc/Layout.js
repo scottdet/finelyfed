@@ -37,7 +37,7 @@ class Layout extends Component {
     }
 
     let mediaURLs = [];
-    const access_token = "IGQVJXTE55aHVZANDgxZA0tOaXNVdEdmZAENJTXJKUDZA2U3hVa3VTcnQ4ZAzF4dElwZAFUtbURtdmpuZAk1UbnNrMzBUSmFZANV9kS1hvVFZAGZAnJsZAmd6TFBVelBHYlAwanltbXZAnR1NGYXdCV2p6SThCM19TegZDZD";
+    const access_token = "IGQVJYWEtJREJIT0hVNGo3U2tkQnRyOUs3WDNWeWs4MWxCUTFFMnoyaUR0REM3YnBrT0hyQjBmc3Vtcld0X184VUhHeWYzRjBhaVZAqQXVtYzF5NmJwY19BNUdnRDRwRmQ2NmU1U2FNMWYxUFRzTkVtZAwZDZD";
     await fetch(`https://graph.instagram.com/v10.0/17841408078439206/media?access_token=${access_token}&limit=10`)
       .then(res => res.json())
       .then(
